@@ -69,7 +69,23 @@ class Widget {
 
         const closeButton = document.createElement('button');
         closeButton.className = 'widget-close';
-        closeButton.innerHTML = '×';
+        const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        svg.setAttribute("width", "16");
+        svg.setAttribute("height", "16");
+        svg.setAttribute("viewBox", "0 0 24 24");
+        svg.setAttribute("fill", "none");
+        svg.setAttribute("stroke", "currentColor");
+        svg.setAttribute("stroke-width", "2");
+
+        const path1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        path1.setAttribute("d", "M18 6L6 18");
+
+        const path2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        path2.setAttribute("d", "M6 6L18 18");
+
+        svg.appendChild(path1);
+        svg.appendChild(path2);
+        closeButton.appendChild(svg);
         closeButton.onclick = () => {
             widget.remove();
             Widget.destroyInstance();
