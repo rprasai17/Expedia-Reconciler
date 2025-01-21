@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Expedia Reconciler",
+    "version": "0.0.1",
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "action": {
+        "default_title": "Expedia Reconciler"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://apps.expediapartnercentral.com/lodging/*",
+                "https://apps.expediapartnercentral.com/lodging/reservations/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "css": [
+                "styles.css"
+            ]
+        }
+    ]
+}

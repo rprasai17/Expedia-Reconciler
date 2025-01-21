@@ -1,0 +1,31 @@
+.floating-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 10px;
+    z-index: 999999;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  
+  .widget-button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .widget-button:hover {
+    background-color: #45a049;
+  }
+  
+  .widget-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
